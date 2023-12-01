@@ -1,0 +1,10 @@
+{
+    "name": "sma ruleset",
+    "rules": [
+        {                    
+            "id": "AA0072",
+            "action": "Hidden",
+            "justification": "Our naming strategry is ok"
+        }
+    ]
+}
