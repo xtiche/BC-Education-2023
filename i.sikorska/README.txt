@@ -1,1 +1,1 @@
-Putin - nehoroshyi chelovek
+Putin - nehoroshyi chelovek!
