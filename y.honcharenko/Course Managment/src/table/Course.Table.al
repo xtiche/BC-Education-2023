@@ -2,6 +2,8 @@ table 50200 Course
 {
     DataClassification = CustomerContent;
     Caption = 'Course';
+    DrillDownPageId = "PTE Courses";
+    LookupPageId = "PTE Courses";
 
     fields
     {
