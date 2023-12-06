@@ -1,0 +1,32 @@
+{
+    "id": "ff1fe7f1-6f29-42ab-8f73-fda707feb75e",
+    "name": "Course Managment",
+    "publisher": "Default Publisher",
+    "version": "1.0.0.0",
+    "brief": "",
+    "description": "",
+    "privacyStatement": "",
+    "EULA": "",
+    "help": "",
+    "url": "",
+    "logo": "",
+    "dependencies": [],
+    "screenshots": [],
+    "platform": "1.0.0.0",
+    "application": "22.0.0.0",
+    "idRanges": [
+        {
+            "from": 50200,
+            "to": 50249
+        }
+    ],
+    "resourceExposurePolicy": {
+        "allowDebugging": true,
+        "allowDownloadingSource": true,
+        "includeSourceInSymbolFile": true
+    },
+    "runtime": "11.0",
+    "features": [
+        "NoImplicitWith"
+    ]
+}
