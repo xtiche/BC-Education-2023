@@ -6,5 +6,7 @@
 launch.json
 !app.json
 rad.json
+settings.json
+ruleset.json
 *.app
 *.g.xlf
