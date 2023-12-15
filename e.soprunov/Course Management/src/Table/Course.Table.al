@@ -3,6 +3,9 @@ table 50101 Course
     DataClassification = CustomerContent;
     //Caption = 'Course';
     CaptionML = ENU = 'Course', UKR = 'Курси';
+    DrillDownPageId = "PTE Cources";
+    LookupPageId = "PTE Cources";
+
     fields
     {
         field(1; Code; Code[20])
