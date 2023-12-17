@@ -4,7 +4,7 @@ table 50102 "PTE Event"
     DataClassification = CustomerContent;
     LookupPageId = "PTE Events";
     DrillDownPageId = "PTE Events";
-    
+
     fields
     {
         field(1; "No."; Code[20])
@@ -21,7 +21,7 @@ table 50102 "PTE Event"
             TableRelation = "PTE Course";
 
             trigger OnValidate()
-            var 
+            var
                 lCourse: Record "PTE Course";
             begin
                 lCourse.Reset();
@@ -29,7 +29,7 @@ table 50102 "PTE Event"
                 if lCourse.FindFirst() then
                     rec."Instructor Code" := lCourse."Instructor Code";
             end;
-            
+
         }
         field(11; "Course Name"; Text[50])
         {
@@ -68,13 +68,13 @@ table 50102 "PTE Event"
     }
     keys
     {
-        key(PK; "No.","Event Date")
+        key(PK; "No.", "Event Date")
         {
             Clustered = true;
         }
     }
     fieldgroups
     {
-    fieldgroup(DropDown; "No.", "Event Date", "Course Code", "Course Name"){}
+        fieldgroup(DropDown; "No.", "Event Date", "Course Code", "Course Name") { }
     }
 }
