@@ -1,18 +1,20 @@
-page 50102 "PTE Cource"
+page 50101 "PTE Courses"
 {
     ApplicationArea = All;
-    Caption = 'Cource';
-    PageType = Card;
-    SourceTable = Course;
-    
+    Caption = 'Cources';
+    PageType = List;
+    CardPageId = "PTE Course";
+    SourceTable = "PTE Course";
+    UsageCategory = Lists;
+    Editable = false;
+
+
     layout
     {
         area(content)
         {
-            group(General)
+            repeater(General)
             {
-                Caption = 'General';
-                
                 field("Code"; Rec."Code")
                 {
                     ToolTip = 'Specifies the value of the Code field.';
@@ -21,11 +23,11 @@ page 50102 "PTE Cource"
                 {
                     ToolTip = 'Specifies the value of the Course Type field.';
                 }
-                 field(Name; Rec.Name)
+                field(Name; Rec.Name)
                 {
                     ToolTip = 'Specifies the value of the Name field.';
                 }
-               field("Instructor Code"; Rec."Instructor Code")
+                field("Instructor Code"; Rec."Instructor Code")
                 {
                     ToolTip = 'Specifies the value of the Instructor Code field.';
                 }
