@@ -1,10 +1,11 @@
-table 50101 Course
+table 50101 "PTE Course"
 {
     DataClassification = CustomerContent;
     //Caption = 'Course';
     CaptionML = ENU = 'Course', UKR = 'Курси';
-    DrillDownPageId = "PTE Cources";
-    LookupPageId = "PTE Cources";
+    DrillDownPageId = "PTE Courses";
+    LookupPageId = "PTE Courses";
+    DataCaptionFields = Code, Name;
 
     fields
     {
@@ -33,7 +34,6 @@ table 50101 Course
             //Caption = 'Instructor Code';
             CaptionML = ENU = 'Instructor Code', UKR = 'Код лектора';
             TableRelation = Resource;
-
         }
         field(31; "Instructor Name"; Text[100])
         {

@@ -12,7 +12,10 @@ tableextension 50101 "PTE Resource" extends Resource
         {
             //Caption = 'No. of Courses';
             CaptionML = ENU = 'No. of Courses', UKR = 'Кількість курсів';
-            DataClassification = CustomerContent;
+            FieldClass = FlowField;
+            CalcFormula = count("PTE Course" where ("Instructor Code" = field("No.")));
+            Editable = false;
+
             trigger OnValidate()
             begin
                 if "No. of Courses" < 0 then
