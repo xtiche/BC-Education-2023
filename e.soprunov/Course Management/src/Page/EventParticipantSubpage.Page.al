@@ -35,10 +35,19 @@ page 50106 "PTE Event Participant Subpage"
                 field("Registration Confirmed"; Rec."Registration Confirmed")
                 {
                     ToolTip = 'Specifies the value of the Registration Confirmed field.';
+                    trigger OnValidate()
+                    begin
+                        CurrPage.Update();    
+                    end;
                 }
                 field("Checked-in"; Rec."Checked-in")
                 {
                     ToolTip = 'Specifies the value of the Checked-in field.';
+                trigger OnValidate()
+                    begin
+                        CurrPage.Update();    
+                    end;
+
                 }
             }
         }

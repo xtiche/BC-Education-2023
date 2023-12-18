@@ -28,6 +28,11 @@ page 50102 "PTE Course"
                field("Instructor Code"; Rec."Instructor Code")
                 {
                     ToolTip = 'Specifies the value of the Instructor Code field.';
+                    trigger OnValidate()
+                    begin
+                        CurrPage.Update();    
+                    end;   
+
                 }
                 field("Instructor Name"; Rec."Instructor Name")
                 {

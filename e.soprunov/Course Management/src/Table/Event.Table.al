@@ -11,10 +11,21 @@ table 50102 "PTE Event"
         field(1; "No."; Code[20])
         {
             CaptionML = ENU = 'No.', UKR ='Номер';
+            Editable = true;
+
+            trigger OnValidate()
+            begin
+                if "No." <> xRec."No." then begin
+                    SalesSetup.Get();
+                    NoSeriesMgt.TestManual(SalesSetup."Event Nos.");
+                    "No. Series" := '';
+                end;
+            end;
         }
         field(2; "Event Date"; Date)
         {
             CaptionML = ENU = 'Event Date', UKR = 'Дата події';
+ 
         }
         field(10; "Course Code"; Code[20])
         {
@@ -27,7 +38,7 @@ table 50102 "PTE Event"
             begin
                 lCourse.Reset();
                 lCourse.SetRange(lCourse.Code, rec."Course Code");
-                if lCourse.FindFirst() then
+                if  lCourse.FindFirst() then
                     rec."Instructor Code" := lCourse."Instructor Code";
             end;
 
@@ -66,6 +77,12 @@ table 50102 "PTE Event"
             CalcFormula = count("PTE Event Participant" where("Event No." = field("No."), "Checked-in" = const(true)));
             Editable = false;
         }
+         field(50; "No. Series"; Code[20])
+        {
+            Caption = 'No. Series';
+            Editable = false;
+            TableRelation = "No. Series";
+        }
     }
     keys
     {
@@ -78,4 +95,17 @@ table 50102 "PTE Event"
     {
         fieldgroup(DropDown; "No.", "Event Date", "Course Code", "Course Name") {}
     }
+    var
+        SalesSetup: Record "Sales & Receivables Setup";
+        NoSeriesMgt: Codeunit NoSeriesManagement;
+
+    trigger OnInsert()
+    var
+    begin
+        if "No." = '' then begin
+            SalesSetup.Get();
+            SalesSetup.TestField("Event Nos.");
+            NoSeriesMgt.InitSeries(SalesSetup."Event Nos.", xRec."No. Series", 0D, "No.", "No. Series");
+        end;
+    end;      
 }

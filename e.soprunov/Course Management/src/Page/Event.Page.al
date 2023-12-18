@@ -26,6 +26,11 @@ page 50105 "PTE Event"
                 field("Course Code"; Rec."Course Code")
                 {
                     ToolTip = 'Specifies the value of the Course Code field.';
+                                        trigger OnValidate()
+                    begin
+                        CurrPage.Update();    
+                    end;   
+
                 }
                 field("Course Name"; Rec."Course Name")
                 {
@@ -34,6 +39,11 @@ page 50105 "PTE Event"
                 field("Instructor Code"; Rec."Instructor Code")
                 {
                     ToolTip = 'Specifies the value of the Instructor Code field.';
+                    trigger OnValidate()
+                    begin
+                        CurrPage.Update();    
+                    end;   
+
                 }
                 field("Instructor Name"; Rec."Instructor Name")
                 {
@@ -55,6 +65,7 @@ page 50105 "PTE Event"
                 part ("Event Participant"; "PTE Event Participant Subpage")
                 {
                     SubPageLink = "Event No." = field("No.");
+                    UpdatePropagation = Both;
                 }
             }
         }
