@@ -5,6 +5,7 @@ table 50101 "PTE Course"
     CaptionML = ENU = 'Course', UKR = 'Курси';
     DrillDownPageId = "PTE Courses";
     LookupPageId = "PTE Courses";
+    DataCaptionFields = Code, Name;
 
     fields
     {

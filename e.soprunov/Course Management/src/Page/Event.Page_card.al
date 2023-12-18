@@ -1,19 +1,17 @@
-page 50105 "PTE Event"
+page 50104 "PTE Event Card"
 {
     ApplicationArea = All;
     Caption = 'Event';
-    PageType = Document;
+    PageType = Card;
     SourceTable = "PTE Event";
-    UsageCategory = Documents;
-
+   
     layout
     {
         area(content)
         {
             group(General)
             {
-                //Caption = 'General';
-                CaptionML = ENU = 'General', UKR = 'Загальні';
+                Caption = 'General';
 
                 field("No."; Rec."No.")
                 {
@@ -46,15 +44,6 @@ page 50105 "PTE Event"
                 field("No. of Actual Participants"; Rec."No. of Actual Participants")
                 {
                     ToolTip = 'Specifies the value of the No. of Actual Participants field.';
-                }
-            }
-            group(Participants)
-            {
-                CaptionML = ENU = 'Participants', UKR = 'Учасники';
-
-                part ("Event Participant"; "PTE Event Participant Subpage")
-                {
-                    SubPageLink = "Event No." = field("No.");
                 }
             }
         }

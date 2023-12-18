@@ -1,23 +1,24 @@
 table 50102 "PTE Event"
 {
-    Caption = 'Event';
+    CaptionML = ENU = 'Event', UKR = 'Події';
     DataClassification = CustomerContent;
     LookupPageId = "PTE Events";
     DrillDownPageId = "PTE Events";
+    DataCaptionFields = "No.", "Course Name";
 
     fields
     {
         field(1; "No."; Code[20])
         {
-            Caption = 'No.';
+            CaptionML = ENU = 'No.', UKR ='Номер';
         }
         field(2; "Event Date"; Date)
         {
-            Caption = 'Event Date';
+            CaptionML = ENU = 'Event Date', UKR = 'Дата події';
         }
         field(10; "Course Code"; Code[20])
         {
-            Caption = 'Course Code';
+            CaptionML = ENU = 'Course Code', UKR = 'Код лекції';
             TableRelation = "PTE Course";
 
             trigger OnValidate()
@@ -33,7 +34,7 @@ table 50102 "PTE Event"
         }
         field(11; "Course Name"; Text[50])
         {
-            Caption = 'Course Name';
+            CaptionML = ENU = 'Course Name', UKR = 'Назва лекції';
             FieldClass = FlowField;
             CalcFormula = lookup("PTE Course".Name where("Code" = field("Course Code")));
             Editable = false;
@@ -41,28 +42,28 @@ table 50102 "PTE Event"
         }
         field(20; "Instructor Code"; Code[20])
         {
-            Caption = 'Instructor Code';
+            CaptionML = ENU = 'Instructor Code', UKR = 'Код лектора';
             TableRelation = Resource;
         }
         field(21; "Instructor Name"; Text[100])
         {
-            Caption = 'Instructor Name';
+            CaptionML = ENU = 'Instructor Name', UKR = 'Імя лектора';
             FieldClass = FlowField;
             CalcFormula = lookup(Resource.Name where("No." = field("Instructor Code")));
             Editable = false;
         }
         field(30; "No. of Registered Participants"; Integer)
         {
-            Caption = 'No. of Registered Participants';
-            //FieldClass = FlowField;
-            //CalcFormula = lookup(Course."Instructor Name" where("Code" = field("Course Code")));
+            CaptionML = ENU = 'No. of Registered Participants', UKR = 'Кількість зареєстрованих';
+            FieldClass = FlowField;
+            CalcFormula = count("PTE Event Participant" where("Event No." = field("No."), "Registration Confirmed" = const(true)));
             Editable = false;
         }
         field(40; "No. of Actual Participants"; Integer)
         {
-            Caption = 'No. of Actual Participants';
-            //FieldClass = FlowField;
-            //CalcFormula = lookup(Course."Instructor Name" where("Code" = field("Course Code")));
+            CaptionML = ENU = 'No. of Actual Participants', UKR = 'Кількість учасників';
+            FieldClass = FlowField;
+            CalcFormula = count("PTE Event Participant" where("Event No." = field("No."), "Checked-in" = const(true)));
             Editable = false;
         }
     }
@@ -75,6 +76,6 @@ table 50102 "PTE Event"
     }
     fieldgroups
     {
-        fieldgroup(DropDown; "No.", "Event Date", "Course Code", "Course Name") { }
+        fieldgroup(DropDown; "No.", "Event Date", "Course Code", "Course Name") {}
     }
 }

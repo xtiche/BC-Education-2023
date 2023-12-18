@@ -2,7 +2,9 @@ table 50103 "PTE Event Participant"
 {
     Caption = 'PTE Event Participant';
     DataClassification = CustomerContent;
-
+    LookupPageId = "PTE Event Participants";
+    DrillDownPageId = "PTE Event Participants";
+    
     fields
     {
         field(1; "Event No."; Code[20])
@@ -30,8 +32,8 @@ table 50103 "PTE Event Participant"
                 lContact.SetRange(lContact."No.", rec."Participant Contact No.");
                 if lContact.FindFirst() then
                     rec."Participant Name" := lContact.Name;
-                rec."Participant Email" := lContact."E-Mail";
-                rec."Participant Phone" := lContact."Phone No.";
+                    rec."Participant Email" := lContact."E-Mail";
+                    rec."Participant Phone" := lContact."Phone No.";
             end;
         }
         field(21; "Participant Name"; Text[100])
