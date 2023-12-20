@@ -4,7 +4,35 @@
 
 pageextension 50100 CustomerListExt extends "Customer List"
 {
+    layout
+    {
+
+    }
+
+    actions
+    {
+        addfirst("&Customer")
+        {
+            action(Push)
+            {
+                ApplicationArea = All;
+                Promoted = true;
+                trigger OnAction()
+                var
+                    s, v : Text;
+
+                begin
+                    s := '                          21685166';
+                    Message(s);
+                    v := s.TrimStart(' ');
+                    Message(v);
+                end;
+            }
+        }
+    }
     trigger OnOpenPage();
+    var
+        "Air Ticket 2": Record "Air Ticket 2";
     begin
         Message('App published: Hello world');
     end;

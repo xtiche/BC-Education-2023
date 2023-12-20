@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "server": "http://locapps",
+            "serverInstance": "BC",
+            "authentication": "UserPassword",
+            "port": 7049,
+            "tenant": "default",
+            "name": "Local",
+            "request": "launch",
+            "type": "al",
+            "breakOnError": true,
+            "breakOnRecordWrite": "ExcludeTemporary",
+            "launchBrowser": true,
+            "schemaUpdateMode": "Synchronize",
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true
+        }
+    ]
+}
