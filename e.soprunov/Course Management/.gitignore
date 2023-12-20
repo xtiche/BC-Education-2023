@@ -8,5 +8,5 @@ launch.json
 rad.json
 settings.json
 ruleset.json
-*.app
+//*.app
 *.g.xlf
