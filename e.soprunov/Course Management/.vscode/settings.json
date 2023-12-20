@@ -1,0 +1,11 @@
+{
+    "al.codeAnalyzers": ["${CodeCop}","${UICop}"],
+    "al.enableCodeAnalysis": true,
+    "al.backgroundCodeAnalysis": true,
+    "al.ruleSetPath": "./ruleset.json",
+   
+    "CRS.FileNamePattern": "<Prefix><ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+    "CRS.FileNamePatternExtensions": "<Prefix><BaseNameShort>.<ObjectTypeShortPascalCase>.al",
+    "CRS.ObjectNamePrefix": "PTE",
+    "CRS.RemovePrefixFromFilename": true,
+}
