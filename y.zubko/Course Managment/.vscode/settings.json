@@ -1,0 +1,11 @@
+{
+"al.codeAnalyzers": ["${CodeCop}","${UICop}","${PerTenantExtensionCop}"],
+"al.enableCodeAnalysis": true,
+"al.backgroundCodeAnalysis": "Project",
+"al.ruleSetPath": "./rules.json",
+
+"CRS.FileNamePattern": "<Prefix><ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+"CRS.FileNamePatternExtensions": "<Prefix><BaseNameShort>.<ObjectTypeShortPascalCase>.al",
+"CRS.ObjectNamePrefix": "SCR",
+"CRS.RemovePrefixFromFilename": true
+}
