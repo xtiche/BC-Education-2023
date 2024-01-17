@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "server": "http://locapps",
+            "server": "http://locappsge",
             "serverInstance": "BC",
             "authentication": "UserPassword",
             "port": 7049,

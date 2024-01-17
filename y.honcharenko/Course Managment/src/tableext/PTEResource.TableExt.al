@@ -14,7 +14,10 @@ tableextension 50200 "PTE Resource" extends Resource
             DataClassification = CustomerContent;
 
             trigger OnValidate()
+            var
+                int: Integer;
             begin
+                if Evaluate(int, 's00001') then;
                 if ("No. of Courses" < 0) then
                     Error('Value must be more then 0');
             end;
