@@ -13,7 +13,7 @@ table 50101 "PTE Course"
         {
             //Caption = 'Code';
             CaptionML = ENU = 'Code', UKR = 'Код лекції';
-
+            NotBlank = true;
         }
         field(10; "Course Type"; Option)
         {

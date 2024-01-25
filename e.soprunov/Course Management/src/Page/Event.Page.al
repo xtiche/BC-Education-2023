@@ -26,10 +26,11 @@ page 50105 "PTE Event"
                 field("Course Code"; Rec."Course Code")
                 {
                     ToolTip = 'Specifies the value of the Course Code field.';
-                                        trigger OnValidate()
+
+                    trigger OnValidate()
                     begin
-                        CurrPage.Update();    
-                    end;   
+                        Rec.CalcFields("Course Name");
+                    end;
 
                 }
                 field("Course Name"; Rec."Course Name")
@@ -39,10 +40,11 @@ page 50105 "PTE Event"
                 field("Instructor Code"; Rec."Instructor Code")
                 {
                     ToolTip = 'Specifies the value of the Instructor Code field.';
+
                     trigger OnValidate()
                     begin
-                        CurrPage.Update();    
-                    end;   
+                        Rec.CalcFields("Instructor Name")
+                    end;
 
                 }
                 field("Instructor Name"; Rec."Instructor Name")
@@ -58,16 +60,16 @@ page 50105 "PTE Event"
                     ToolTip = 'Specifies the value of the No. of Actual Participants field.';
                 }
             }
-            group(Participants)
-            {
-                CaptionML = ENU = 'Participants', UKR = 'Учасники';
+            //            group(Participants)
+            //            {
+            //                CaptionML = ENU = 'Participants', UKR = 'Учасники';
 
-                part ("Event Participant"; "PTE Event Participant Subpage")
-                {
-                    SubPageLink = "Event No." = field("No.");
-                    UpdatePropagation = Both;
-                }
+            part("Event Participant"; "PTE Event Participant Subpage")
+            {
+                SubPageLink = "Event No." = field("No.");
+                UpdatePropagation = Both;
             }
+            //            }
         }
     }
 }

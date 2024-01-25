@@ -1,0 +1,15 @@
+@hostSTD = http://bcserver-default:7048/bc/api/v2.0
+@hostCust = http://bcserver-default:7048/BC/api/eSoprunov/pteGroup/v1.0
+@basic_auth = Basic admin 123456789
+@authToken = +kAipjHgdSt4E/O3yWjMl6kK1sxFBjoxf+TtAudgJIg=
+@contentType = application/json
+
+
+###
+
+
+GET {{hostCust}}/companies(f9d9c168-c336-ee11-bdf9-6045bde98a3d)/eventsAPI?extend='eventParticipantsAPI'
+Authorization: {{basic_auth}}
+####
+GET {{hostCust}}/companies(f9d9c168-c336-ee11-bdf9-6045bde98a3d)/eventParticipantsAPI
+Authorization: {{basic_auth}}
