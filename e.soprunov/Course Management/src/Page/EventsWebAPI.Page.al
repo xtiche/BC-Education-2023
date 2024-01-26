@@ -11,12 +11,13 @@ page 50104 "PTE Events Web API"
     EntityName = 'eventAPI';
     EntitySetName = 'eventsAPI';
 
-    ODataKeyFields = "No.", SystemId;
+    ODataKeyFields = SystemId;
     SourceTable = "PTE Event";
 
     Extensible = false;
     DelayedInsert = true;
-    ApplicationArea = All;
+    ChangeTrackingAllowed = true;
+    //ApplicationArea = All;
 
     layout
     {
@@ -53,15 +54,16 @@ page 50104 "PTE Events Web API"
                 {
                     Caption = 'Instructor Name';
                 }
-            }
-            part(eventParticipantsAPI; "PTE Event Participants Web API")
-            {
-                Caption = 'Event Participants';
-                EntityName = 'eventParticipantAPI';
-                EntitySetName = 'eventParticipantsAPI';
-                SubPageLink = "Event No." = field("No.");
-            }
 
+                part(eventParticipantsAPI; "PTE Event Participants Web API")
+                {
+                    Caption = 'Event Participants';
+                    EntityName = 'eventParticipantAPI';
+                    EntitySetName = 'eventParticipantsAPI';
+                    SubPageLink = "Event No." = field("No.");
+                }
+
+            }
         }
     }
 }

@@ -15,11 +15,13 @@ table 50103 "PTE Event Participant"
         {
             Caption = 'Line No.';
         }
-        field(3; "Event Id"; Guid)
+        
+ /*       field(3; "Event Id"; Guid)
         {
             TableRelation = "PTE Event".SystemId;
             Caption = 'Event Id';
         }
+*/
         field(10; "Registration Date"; Date)
         {
             Caption = 'Registration Date';
