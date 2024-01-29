@@ -1,3 +1,5 @@
-.alpackages
-.snapshots
-/.vscode/.alcache
+.alpackages/
+.snapshots/
+.vscode/
+app.json
+ruleset.json
