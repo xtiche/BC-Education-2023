@@ -1,4 +1,4 @@
-tableextension 50151 "SRC Resource Extension" extends Resource
+tableextension 50151 "YAR Resource Extension" extends Resource
 {
     fields
     {
@@ -11,7 +11,7 @@ tableextension 50151 "SRC Resource Extension" extends Resource
         {
             Caption = 'No. of Courses';
             FieldClass = FlowField;
-            CalcFormula = count("SRC Course" where("Instructor Code" = field("No.")));
+            CalcFormula = count("YAR Course" where("Instructor Code" = field("No.")));
             Editable = false;
         }
     }

@@ -1,6 +1,6 @@
-table 50150 "SRC Course"
+table 50150 "YAR Course"
 {
-    Caption = 'SCR_Resource';
+    Caption = 'YAR Resource';
     DataClassification = CustomerContent;
 
     fields
@@ -25,7 +25,7 @@ table 50150 "SRC Course"
             Caption = 'Instructor Code';
             TableRelation = Resource;
         }
-        field(40; "Instructor Name"; Text[50])
+        field(40; "Instructor Name"; Text[100])
         {
             Caption = 'Instructor Name';
             FieldClass = FlowField;
