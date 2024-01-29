@@ -6,6 +6,6 @@
     
     "CRS.FileNamePattern": "<Prefix><ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
     "CRS.FileNamePatternExtensions": "<Prefix><BaseNameShort>.<ObjectTypeShortPascalCase>.al",
-    "CRS.ObjectNamePrefix": "PTE",
+    "CRS.ObjectNamePrefix": "YAR",
     "CRS.RemovePrefixFromFilename": true
 }
