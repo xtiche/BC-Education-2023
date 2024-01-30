@@ -3,3 +3,4 @@
 .vscode/
 app.json
 ruleset.json
+*.app
