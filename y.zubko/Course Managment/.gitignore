@@ -2,4 +2,3 @@
 .snapshots/
 .vscode/
 ruleset.json
-*.app
