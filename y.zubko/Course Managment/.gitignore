@@ -1,6 +1,5 @@
 .alpackages/
 .snapshots/
 .vscode/
-app.json
 ruleset.json
 *.app
