@@ -1,7 +1,8 @@
 table 50150 "YAR Course"
 {
-    Caption = 'YAR Resource';
+    // Caption = 'YAR Resource';
     DataClassification = CustomerContent;
+    CaptionML = ENU = 'Course', UKR = 'Курси';
 
     fields
     {
@@ -12,22 +13,22 @@ table 50150 "YAR Course"
         field(10; "Course Type"; Option)
         {
             //Caption = 'Course Type';
-            CaptionML = ENU = 'Course Type', UKR = 'Тип напрямку';
-            OptionMembers = " ","One","Two";
+            CaptionML = ENU = 'Course Type', UKR = 'Код лекції';
+            OptionMembers = " ","NAV","BC";
             OptionCaption = ' , Navision, Business Central';
         }
         field(20; Name; Text[50])
         {
-            Caption = 'Name';
+            CaptionML = ENU = 'Name', UKR = 'Назва лекції';
         }
         field(30; "Instructor Code"; Code[20])
         {
-            Caption = 'Instructor Code';
+            CaptionML = ENU = 'Instructor Code', UKR = 'Код лектора';
             TableRelation = Resource;
         }
         field(40; "Instructor Name"; Text[100])
         {
-            Caption = 'Instructor Name';
+            CaptionML = ENU = 'Instructor Name', UKR = 'Імʼя лектора';
             FieldClass = FlowField;
             CalcFormula = lookup(Resource.Name where("No." = field("Instructor Code")));
             Editable = false;
@@ -38,6 +39,13 @@ table 50150 "YAR Course"
         key(PK; "Code")
         {
             Clustered = true;
+        }
+    }
+    fieldgroups
+    {
+        fieldgroup(DropDown; Code, Name)
+        {
+
         }
     }
 }
