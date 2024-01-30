@@ -1,4 +1,4 @@
-pageextension 50150 "YAR Resource Extension" extends "Resource List"
+pageextension 50150 "YAR Resource List" extends "Resource List"
 {
     layout
     {
@@ -7,10 +7,12 @@ pageextension 50150 "YAR Resource Extension" extends "Resource List"
             field("Instructor Level"; Rec."Instructor Level")
             {
                 ApplicationArea = All;
+                ToolTipML = ENU = 'The value of the Instructor Level', UKR = 'Рівень інструктора';
             }
             field("No. of Courses"; Rec."No. of Courses")
             {
                 ApplicationArea = All;
+                ToolTipML = ENU = 'The value of the No. of Courses field', UKR = 'Кількість курсів';
             }
         }
     }
