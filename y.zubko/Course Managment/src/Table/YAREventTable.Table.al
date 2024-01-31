@@ -1,7 +1,6 @@
-table 50151 "YAR Event"
+table 50151 "YAR Event Table"
 {
     CaptionML = ENU = 'Event', UKR = 'Події';
-    // 
     DataClassification = CustomerContent;
 
     // властивість таблиці, яка визначає сторінку, яка відображається, коли користувач робить запит на значення з цієї таблиці. Властивість LookupPageId зазвичай використовується для створення випадаючого списку, який дозволяє користувачам вибирати значення з іншої таблиці
@@ -27,11 +26,11 @@ table 50151 "YAR Event"
         field(10; "Course Code"; Code[20])
         {
             CaptionML = ENU = 'Course Code', UKR = 'Код лекції';
-            TableRelation = "YAR Course";
+            TableRelation = "YAR Course Table";
 
             trigger OnValidate()
             var
-                CourseCode: Record "YAR Course";
+                CourseCode: Record "YAR Course Table";
             begin
                 CourseCode.Reset();
                 CourseCode.SetRange(CourseCode.Code, rec."Course Code");
@@ -43,7 +42,7 @@ table 50151 "YAR Event"
         {
             CaptionML = ENU = 'Course Name', UKR = 'Назва лекції';
             FieldClass = FlowField;
-            CalcFormula = lookup("YAR Course".Name where("Code" = field("Course Code")));
+            CalcFormula = lookup("YAR Course Table".Name where("Code" = field("Course Code")));
             Editable = false;
         }
         field(20; "Instructor Code"; Code[20])

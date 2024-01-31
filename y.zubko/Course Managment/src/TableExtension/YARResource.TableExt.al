@@ -11,7 +11,7 @@ tableextension 50151 "YAR Resource" extends Resource
         {
             CaptionML = ENU = 'No. of Courses', UKR = 'Кількість курсів';
             FieldClass = FlowField;
-            CalcFormula = count("YAR Course" where("Instructor Code" = field("No.")));
+            CalcFormula = count("YAR Course Table" where("Instructor Code" = field("No.")));
             Editable = false;
         }
     }
