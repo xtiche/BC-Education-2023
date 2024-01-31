@@ -64,14 +64,14 @@ table 50151 "YAR Event"
         {
             CaptionML = ENU = 'No. of Registered Participants', UKR = 'Кількість зареєстрованих';
             FieldClass = FlowField;
-            // CalcFormula = count(YAR Event Participiant)
+            CalcFormula = count("YAR Event Participiant" where("Event No." = field("No."), "Registration Confirmed" = const(true)));
             Editable = false;
         }
         field(40; "No. of Actual"; Integer)
         {
             CaptionML = ENU = 'No. of Actual', UKR = 'Кількість учасників';
             FieldClass = FlowField;
-            // CalcFormula = count(YAR Event Participiant)
+            CalcFormula = count("YAR Event Participiant" where("Event No." = field("No."), "Checked-in" = const(true)));
             Editable = false;
         }
         field(50; "Participants"; Code[20])
