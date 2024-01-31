@@ -1,6 +1,5 @@
 table 50150 "YAR Course"
 {
-    // Caption = 'YAR Resource';
     DataClassification = CustomerContent;
     CaptionML = ENU = 'Course', UKR = 'Курси';
 
@@ -26,7 +25,7 @@ table 50150 "YAR Course"
             CaptionML = ENU = 'Instructor Code', UKR = 'Код лектора';
             TableRelation = Resource;
         }
-        field(40; "Instructor Name"; Text[100])
+        field(40; "Instructor Name"; Text[50])
         {
             CaptionML = ENU = 'Instructor Name', UKR = 'Імʼя лектора';
             FieldClass = FlowField;
