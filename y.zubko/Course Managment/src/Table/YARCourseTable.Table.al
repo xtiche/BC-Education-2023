@@ -1,4 +1,4 @@
-table 50150 "YAR Course"
+table 50150 "YAR Course Table"
 {
     DataClassification = CustomerContent;
     CaptionML = ENU = 'Course', UKR = 'Курси';

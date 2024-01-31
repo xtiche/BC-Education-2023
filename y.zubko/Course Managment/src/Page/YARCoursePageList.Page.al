@@ -1,18 +1,21 @@
-page 50151 "YAR Course PageCard"
+page 50150 "YAR Course Page List"
 {
     ApplicationArea = All;
-    Caption = 'Course Card';
-    PageType = Card;
-    SourceTable = "YAR Course";
+    CaptionML = ENU = 'Course List', UKR = 'Курси';
+    PageType = List;
+
+    // Визначає сторінку, яка буде відкрита, коли користувач клацне запис на сторінці-списку або сторінці-частини списку
+    CardPageId = "YAR Course Page Card";
+    SourceTable = "YAR Course Table";
+    UsageCategory = Lists;
+    Editable = false;
 
     layout
     {
         area(content)
         {
-            group(General)
+            repeater(General)
             {
-                Caption = 'General';
-
                 field("Code"; Rec."Code")
                 {
                     ToolTip = 'Specifies the value of the Code field.';
@@ -28,10 +31,6 @@ page 50151 "YAR Course PageCard"
                 field("Instructor Code"; Rec."Instructor Code")
                 {
                     ToolTip = 'Specifies the value of the Instructor Code field.';
-                    trigger OnValidate()
-                    begin
-                        CurrPage.Update();
-                    end;
                 }
                 field("Instructor Name"; Rec."Instructor Name")
                 {
