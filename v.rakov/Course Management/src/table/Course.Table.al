@@ -1,19 +1,20 @@
-table 50200 Cource
+table 50200 Course
 {
     DataClassification = CustomerContent;
+    DrillDownPageId = "PTE Courses";
+    LookupPageId = "PTE Courses";
 
     fields
     {
         field(1; Code; Code[20])
         {
             Caption = 'Code';
-
         }
         field(10; "Course Type"; Option)
         {
             Caption = 'Course Type';
-            OptionMembers = " ","NAVi";
-            OptionCaption = ' , "DYNamics NAVision';
+            OptionMembers = " ","NAVi","MmM";
+            OptionCaption = ' , DYNamics NAVision, M m M';
         }
         field(20; Name; Text[50])
         {
@@ -23,6 +24,10 @@ table 50200 Cource
         {
             Caption = 'Instructor code';
             TableRelation = Resource."No.";
+            trigger OnValidate()
+            begin
+                Rec.CalcFields("Instructor Name");
+            end;
         }
         field(31; "Instructor Name"; Text[100])
         {

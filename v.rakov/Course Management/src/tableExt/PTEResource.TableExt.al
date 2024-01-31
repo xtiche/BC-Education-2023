@@ -11,7 +11,9 @@ tableextension 50200 "PTE Resource" extends Resource
         field(50201; "No. of Courses"; Integer)
         {
             Caption = 'No. of Courses';
-            DataClassification = CustomerContent;
+            FieldClass = FlowField;
+            CalcFormula = count("PTE Event" where("Instructor Code" = field("No.")));
+            Editable = false;
             trigger OnValidate()
             begin
                 if ("No. of Courses" < 0) then
