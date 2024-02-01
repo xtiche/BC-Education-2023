@@ -25,7 +25,7 @@ table 50150 "YAR Course Table"
             CaptionML = ENU = 'Instructor Code', UKR = 'Код лектора';
             TableRelation = Resource;
         }
-        field(40; "Instructor Name"; Text[50])
+        field(40; "Instructor Name"; Text[100])
         {
             CaptionML = ENU = 'Instructor Name', UKR = 'Імʼя лектора';
             FieldClass = FlowField;

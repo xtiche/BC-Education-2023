@@ -50,7 +50,7 @@ table 50151 "YAR Event Table"
             CaptionML = ENU = 'Instructor Code', UKR = 'Код лектора';
             TableRelation = Resource;
         }
-        field(21; "Instructor Name"; Text[50])
+        field(21; "Instructor Name"; Text[100])
         {
             CaptionML = ENU = 'Instructor Name', UKR = 'Імʼя лектора';
 
