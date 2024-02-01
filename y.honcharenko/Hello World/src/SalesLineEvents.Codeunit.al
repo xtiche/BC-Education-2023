@@ -22,4 +22,10 @@ codeunit 50100 "Sales Line Events"
     begin
         GenJournalLine."Internet Order No." := SalesHeader."Internet Order No.";
     end;
+
+    [EventSubscriber(ObjectType::Table, Database::"Cust. Ledger Entry", 'OnAfterCopyCustLedgerEntryFromGenJnlLine', '', false, false)]
+    local procedure OnAfterCopyCustLedgerEntryFromGenJnlLine(var CustLedgerEntry: Record "Cust. Ledger Entry"; GenJournalLine: Record "Gen. Journal Line")
+    begin
+        CustLedgerEntry."Internet Order No." := GenJournalLine."Internet Order No.";
+    end;
 }
