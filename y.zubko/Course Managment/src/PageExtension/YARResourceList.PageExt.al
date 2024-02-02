@@ -7,7 +7,7 @@ pageextension 50150 "YAR Resource List" extends "Resource List"
             field("Instructor Level"; Rec."Instructor Level")
             {
                 ApplicationArea = All;
-                ToolTipML = ENU = 'The value of the Instructor Level', UKR = 'Рівень інструктора';
+                ToolTipML = ENU = 'The value of the Instructor Level', UKR = 'Рівень лектора';
             }
             field("No. of Courses"; Rec."No. of Courses")
             {

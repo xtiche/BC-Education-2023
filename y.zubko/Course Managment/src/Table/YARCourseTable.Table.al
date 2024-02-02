@@ -1,7 +1,7 @@
 table 50150 "YAR Course Table"
 {
+    CaptionML = ENU = 'YAR Course Table', UKR = 'YAR Курси Таблиця';
     DataClassification = CustomerContent;
-    CaptionML = ENU = 'Course', UKR = 'Курси';
 
     fields
     {

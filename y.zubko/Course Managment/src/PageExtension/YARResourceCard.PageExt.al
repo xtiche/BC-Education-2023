@@ -9,8 +9,8 @@ pageextension 50151 YarResourceCard extends "Resource Card"
                 field("Instructor Level"; Rec."Instructor Level")
                 {
                     ApplicationArea = All;
-                    CaptionML = ENU = 'Instructor Level', UKR = 'Рівень інструктора';
-                    ToolTipML = ENU = 'Instructor Level', UKR = 'Рівень інструктора';
+                    CaptionML = ENU = 'Instructor Level', UKR = 'Рівень лектора';
+                    ToolTipML = ENU = 'Instructor Level', UKR = 'Рівень лектора';
                 }
                 field("No. of Courses"; Rec."No. of Courses")
                 {
