@@ -1,6 +1,6 @@
 table 50151 "YAR Event Table"
 {
-    CaptionML = ENU = 'Event', UKR = 'Події';
+    CaptionML = ENU = 'YAR Event Table', UKR = 'YAR Події';
     DataClassification = CustomerContent;
 
     // властивість таблиці, яка визначає сторінку, яка відображається, коли користувач робить запит на значення з цієї таблиці. Властивість LookupPageId зазвичай використовується для створення випадаючого списку, який дозволяє користувачам вибирати значення з іншої таблиці
@@ -75,7 +75,7 @@ table 50151 "YAR Event Table"
         }
         field(50; "Participants"; Code[20])
         {
-
+            CaptionML = ENU = 'Participants', UKR = 'Учасники';
         }
     }
     keys

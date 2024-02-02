@@ -4,7 +4,7 @@ tableextension 50151 "YAR Resource" extends Resource
     {
         field(50150; "Instructor Level"; Integer)
         {
-            CaptionML = ENU = 'Instructor Level', UKR = 'Рівень інструктора';
+            CaptionML = ENU = 'Instructor Level', UKR = 'Рівень лектора';
             DataClassification = CustomerContent;
         }
         field(50151; "No. of Courses"; Integer)

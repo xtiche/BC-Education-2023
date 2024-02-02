@@ -1,7 +1,7 @@
 page 50150 "YAR Course Page List"
 {
     ApplicationArea = All;
-    CaptionML = ENU = 'Course List', UKR = 'Курси';
+    CaptionML = ENU = 'YAR Course Page List', UKR = 'YAR Курси Page List';
     PageType = List;
 
     // Визначає сторінку, яка буде відкрита, коли користувач клацне запис на сторінці-списку або сторінці-частини списку
@@ -18,23 +18,23 @@ page 50150 "YAR Course Page List"
             {
                 field("Code"; Rec."Code")
                 {
-                    ToolTip = 'Specifies the value of the Code field.';
+                    ToolTipML = ENU = 'Specifies the value of the Code field.', UKR = 'Значення поля Код';
                 }
                 field("Course Type"; Rec."Course Type")
                 {
-                    ToolTip = 'Specifies the value of the Course Type field.';
+                    ToolTipML = ENU = 'Specifies the value of the Course Type field.', UKR = 'Значення поля Код лекції';
                 }
                 field(Name; Rec.Name)
                 {
-                    ToolTip = 'Specifies the value of the Name field.';
+                    ToolTipML = ENU = 'Specifies the value of the Name field.', UKR = 'Значення поля Назва лекції';
                 }
                 field("Instructor Code"; Rec."Instructor Code")
                 {
-                    ToolTip = 'Specifies the value of the Instructor Code field.';
+                    ToolTipML = ENU = 'Specifies the value of the Instructor Code field.', UKR = 'Значення поля Рівень лектора';
                 }
                 field("Instructor Name"; Rec."Instructor Name")
                 {
-                    ToolTip = 'Specifies the value of the Instructor Name field.';
+                    ToolTipML = ENU = 'Specifies the value of the Instructor Name field.', UKR = 'Значення поля Імʼя лектора';
                 }
             }
         }

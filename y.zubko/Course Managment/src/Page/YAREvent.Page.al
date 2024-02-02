@@ -1,7 +1,7 @@
 page 50152 "YAR Event"
 {
     ApplicationArea = All;
-    Caption = 'Event';
+    CaptionML = ENU = 'YAR Event Page', UKR = 'YAR Події Page';
     PageType = Document;
     SourceTable = "YAR Event Table";
     UsageCategory = Documents;
@@ -18,15 +18,15 @@ page 50152 "YAR Event"
                 field("No."; Rec."No.")
                 {
                     // встановлює підказку, що відображається, коли користувач наводить курсор на поле. Підказка пояснює призначення поля
-                    ToolTip = 'Specifies the value of the No. field.';
+                    ToolTipML = ENU = 'Specifies the value of the No. field.', UKR = 'Значення поля Нумер';
                 }
                 field("Event Date"; Rec."Event Date")
                 {
-                    ToolTip = 'Specifies the value of the Event Date field.';
+                    ToolTipML = ENU = 'Specifies the value of the Event Date field.', UKR = 'Значення поля Дата події';
                 }
                 field("Course Code"; Rec."Course Code")
                 {
-                    ToolTip = 'Specifies the value of the Course Code field.';
+                    ToolTipML = ENU = 'Specifies the value of the Course Code field.', UKR = 'Значення поля Код лекції';
 
                     // визначає блок коду, який запускається, коли значення поля змінюється та проходить валідацію
                     trigger OnValidate()
@@ -38,11 +38,11 @@ page 50152 "YAR Event"
                 }
                 field("Course Name"; Rec."Course Name")
                 {
-                    ToolTip = 'Specifies the value of the Course Name field.';
+                    ToolTipML = ENU = 'Specifies the value of the Course Name field.', UKR = 'Значення поля Назва лекції';
                 }
                 field("Instructor Code"; Rec."Instructor Code")
                 {
-                    ToolTip = 'Specifies the value of the Instructor Code field.';
+                    ToolTipML = ENU = 'Specifies the value of the Instructor Code field.', UKR = 'Значення поля Код лектора';
                     trigger OnValidate()
                     begin
                         CurrPage.Update();
@@ -50,11 +50,11 @@ page 50152 "YAR Event"
                 }
                 field("Instructor Name"; Rec."Instructor Name")
                 {
-                    ToolTip = 'Specifies the value of the Instructor Name field.';
+                    ToolTipML = ENU = 'Specifies the value of the Instructor Name field.', UKR = 'Значення поля Імʼя лектора';
                 }
                 field(Participants; Rec.Participants)
                 {
-                    ToolTip = 'Specifies the value of the Participants field.';
+                    ToolTipML = ENU = 'Specifies the value of the Participants field.', UKR = 'Значення поля Учасники';
                 }
             }
         }
