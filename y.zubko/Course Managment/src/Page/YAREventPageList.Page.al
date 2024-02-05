@@ -6,6 +6,7 @@ page 50153 "YAR Event Page List"
     CardPageId = "YAR Event";
     SourceTable = "YAR Event Table";
     UsageCategory = Lists;
+    Editable = false;
 
     layout
     {
