@@ -3,7 +3,6 @@ page 50150 "YAR Course Page List"
     ApplicationArea = All;
     CaptionML = ENU = 'YAR Course Page List', UKR = 'YAR Курси Page List';
     PageType = List;
-
     // Визначає сторінку, яка буде відкрита, коли користувач клацне запис на сторінці-списку або сторінці-частини списку
     CardPageId = "YAR Course Page Card";
     SourceTable = "YAR Course Table";

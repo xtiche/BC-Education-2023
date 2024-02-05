@@ -2,8 +2,8 @@ table 50152 "YAR Event Participant"
 {
     CaptionML = ENU = 'YAR Event Participant Table', UKR = 'YAR Учасник заходу';
     DataClassification = CustomerContent;
-    // LookupPageId = "YAR Event Participants"
-    // DrillDownPageId = "YAR Event Participants"
+    LookupPageId = "YAR Event Page List";
+    DrillDownPageId = "YAR Event Page List";
 
     fields
     {

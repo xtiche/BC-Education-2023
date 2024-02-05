@@ -4,6 +4,7 @@ page 50154 "YAR Event Participant Subpage"
     CaptionML = ENU = 'YAR Event Participant Subpage', UKR = 'YAR Підсторінка учасника події';
     PageType = ListPart;
     SourceTable = "YAR Event Participant";
+    AutoSplitKey = true;
 
     layout
     {
@@ -34,10 +35,18 @@ page 50154 "YAR Event Participant Subpage"
                 field("Registration Confirmed"; Rec."Registration Confirmed")
                 {
                     ToolTipML = ENU = 'Specifies the value of the Registration Confirmed field', UKR = 'Вказує значення поля "Реєстрація підтверджена"';
+                    trigger OnValidate()
+                    begin
+                        CurrPage.Update();
+                    end;
                 }
                 field("Checked-in"; Rec."Checked-in")
                 {
                     ToolTipML = ENU = 'Specifies the value of the Checked-in field', UKR = 'Визначає значення поля "Зареєстровано"';
+                    trigger OnValidate()
+                    begin
+                        CurrPage.Update();
+                    end;
                 }
             }
         }

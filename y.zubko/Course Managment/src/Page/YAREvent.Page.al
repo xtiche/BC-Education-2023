@@ -31,7 +31,6 @@ page 50152 "YAR Event"
                     // визначає блок коду, який запускається, коли значення поля змінюється та проходить валідацію
                     trigger OnValidate()
                     begin
-
                         // забезпечує збереженя зміненого значення поля на сторінці чи формі
                         CurrPage.Update();
                     end;
@@ -52,9 +51,14 @@ page 50152 "YAR Event"
                 {
                     ToolTipML = ENU = 'Specifies the value of the Instructor Name field.', UKR = 'Значення поля "Імʼя лектора"';
                 }
-                field(Participants; Rec.Participants)
+                group(Participants)
                 {
-                    ToolTipML = ENU = 'Specifies the value of the Participants field.', UKR = 'Значення поля "Учасники"';
+                    CaptionML = ENU = 'Specifies the value of the Participants field.', UKR = 'Значення поля "Учасники"';
+                    part("YAR Event Participant"; "YAR Event Participant Subpage")
+                    {
+                        SubPageLink = "Event No." = field("No.");
+                        UpdatePropagation = Both;
+                    }
                 }
             }
         }
