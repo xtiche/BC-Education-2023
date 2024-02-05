@@ -18,23 +18,23 @@ page 50150 "YAR Course Page List"
             {
                 field("Code"; Rec."Code")
                 {
-                    ToolTipML = ENU = 'Specifies the value of the Code field.', UKR = 'Значення поля Код';
+                    ToolTipML = ENU = 'Specifies the value of the Code field.', UKR = 'Значення поля "Код"';
                 }
                 field("Course Type"; Rec."Course Type")
                 {
-                    ToolTipML = ENU = 'Specifies the value of the Course Type field.', UKR = 'Значення поля Код лекції';
+                    ToolTipML = ENU = 'Specifies the value of the Course Type field.', UKR = 'Значення поля "Код лекції"';
                 }
                 field(Name; Rec.Name)
                 {
-                    ToolTipML = ENU = 'Specifies the value of the Name field.', UKR = 'Значення поля Назва лекції';
+                    ToolTipML = ENU = 'Specifies the value of the Name field.', UKR = 'Значення поля "Назва лекції"';
                 }
                 field("Instructor Code"; Rec."Instructor Code")
                 {
-                    ToolTipML = ENU = 'Specifies the value of the Instructor Code field.', UKR = 'Значення поля Рівень лектора';
+                    ToolTipML = ENU = 'Specifies the value of the Instructor Code field.', UKR = 'Значення поля "Рівень лектора"';
                 }
                 field("Instructor Name"; Rec."Instructor Name")
                 {
-                    ToolTipML = ENU = 'Specifies the value of the Instructor Name field.', UKR = 'Значення поля Імʼя лектора';
+                    ToolTipML = ENU = 'Specifies the value of the Instructor Name field.', UKR = 'Значення поля "Імʼя лектора"';
                 }
             }
         }
