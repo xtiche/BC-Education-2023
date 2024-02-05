@@ -33,11 +33,11 @@ page 50154 "YAR Event Participant Subpage"
                 }
                 field("Registration Confirmed"; Rec."Registration Confirmed")
                 {
-                    ToolTipML = ENU = 'Specifies the value of the Registration Confirmed field.', UKR = ' ';
+                    ToolTipML = ENU = 'Specifies the value of the Registration Confirmed field', UKR = 'Вказує значення поля «Реєстрація підтверджена»';
                 }
                 field("Checked-in"; Rec."Checked-in")
                 {
-                    ToolTipML = ENU = 'Specifies the value of the Checked-in field.', UKR = ' ';
+                    ToolTipML = ENU = 'Specifies the value of the Checked-in field', UKR = 'Визначає значення поля «Зареєстровано»';
                 }
             }
         }
