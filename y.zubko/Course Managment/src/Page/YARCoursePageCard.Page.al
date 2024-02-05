@@ -25,15 +25,15 @@ page 50151 "YAR Course Page Card"
                 }
                 field("Course Type"; Rec."Course Type")
                 {
-                    ToolTipML = ENU = 'Specifies the value of the Course Type field', UKR = 'Визначає значення поля "Тип курсу"';
+                    ToolTipML = ENU = 'Specifies the value of the Course Type field', UKR = 'Визначає значення поля "Тип лекції"';
                 }
                 field(Name; Rec.Name)
                 {
-                    ToolTipML = ENU = 'Specifies the value of the Name field', UKR = 'Вказує значення поля "Імʼя"';
+                    ToolTipML = ENU = 'Specifies the value of the Name field', UKR = 'Вказує значення поля "Назва лекції"';
                 }
                 field("Instructor Code"; Rec."Instructor Code")
                 {
-                    ToolTipML = ENU = 'Specifies the value of the Instructor Code field', UKR = 'Визначає значення поля "Код викладача"';
+                    ToolTipML = ENU = 'Specifies the value of the Instructor Code field', UKR = 'Визначає значення поля "Код лектора"';
                     trigger OnValidate()
                     begin
                         CurrPage.Update();
