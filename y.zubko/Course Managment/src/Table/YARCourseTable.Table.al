@@ -13,8 +13,8 @@ table 50150 "YAR Course Table"
         {
             //Caption = 'Course Type';
             CaptionML = ENU = 'Course Type', UKR = 'Код лекції';
-            OptionMembers = " ","NAV","BC";
-            OptionCaption = ' , Navision, Business Central';
+            OptionMembers = " ","Microsoft Dynamics NAV (Navision)","Microsoft Dynamics CRM","Microsoft Dynamics AX (Axapta)";
+            OptionCaption = ' , Microsoft Dynamics NAV (Navision), Microsoft Dynamics CRM, Microsoft Dynamics AX (Axapta)';
         }
         field(20; Name; Text[50])
         {
