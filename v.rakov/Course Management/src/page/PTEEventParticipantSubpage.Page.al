@@ -15,12 +15,14 @@ page 50204 "PTE Event Participant Subpage"
                 field("Event No."; Rec."Event No.")
                 {
                     ToolTip = 'Номер події';
-                    //Visible = false;
+                    Visible = false;
+                    Editable = false;
                 }
                 field("Line No."; Rec."Line No.")
                 {
                     ToolTip = 'Specifies the value of the Line No. field.';
                     Visible = false;
+                    Editable = false;
                 }
                 field("Registration Date"; Rec."Registration Date")
                 {
@@ -45,6 +47,10 @@ page 50204 "PTE Event Participant Subpage"
                 field("Registration Confirmed"; Rec."Registration Confirmed")
                 {
                     ToolTip = 'Підтвердив реєстрацію';
+                    trigger OnValidate()
+                    begin
+                        CurrPage.Update();
+                    end;
                 }
                 field("Checked-in"; Rec."Checked-in")
                 {

@@ -49,7 +49,8 @@ codeunit 50200 "PTE Task1"
         mItem: Record Item;
         mItemList: Page "Item List";
     BEGIN
-        mItem.SetFilter("Assembly BOM", 'false');
+        //mItem.SetFilter("Assembly BOM", 'false');
+        mItem.SetRange("Assembly BOM", false);
         mItemList.SetTableView(mItem);
         mItemList.Run();
     END;
