@@ -41,6 +41,7 @@ page 50203 "PTE Event"
                 field("No. of Registered Participants"; Rec."No. of Registered Participants")
                 {
                     ToolTip = 'Specifies the value of the No. of Registered Participants field.';
+
                 }
                 field("No. of Actual Participants"; Rec."No. of Actual Participants")
                 {
@@ -51,6 +52,7 @@ page 50203 "PTE Event"
             {
                 ApplicationArea = All;
                 SubPageLink = "Event No." = field("No.");
+                UpdatePropagation = Both;
             }
         }
     }
