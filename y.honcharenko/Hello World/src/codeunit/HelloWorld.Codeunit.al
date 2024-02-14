@@ -1,4 +1,4 @@
-codeunit 50101 HelloWorld implements "QR Code Manager"
+codeunit 50101 HelloWorld implements "IShow Messsage"
 {
 
     procedure ShowMessage()

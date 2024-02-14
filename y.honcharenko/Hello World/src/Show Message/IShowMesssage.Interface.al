@@ -1,4 +1,4 @@
-interface "QR Code Manager"
+interface "IShow Messsage"
 {
     procedure ShowMessage()
 

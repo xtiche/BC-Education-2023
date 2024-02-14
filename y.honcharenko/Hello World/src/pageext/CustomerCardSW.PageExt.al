@@ -21,7 +21,7 @@ pageextension 50105 "PTE Customer Card(SW)" extends "Customer Card"
 
                 trigger OnAction()
                 var
-                    QRCode: Interface "QR Code Manager";
+                    QRCode: Interface "IShow Messsage";
                 begin
                     QRCode := Rec."Show Message";
                     QRCode.ShowMessage();

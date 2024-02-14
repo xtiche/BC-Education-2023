@@ -1,4 +1,4 @@
-codeunit 50102 Quit implements "QR Code Manager"
+codeunit 50102 Quit implements "IShow Messsage"
 {
 
     procedure ShowMessage()
