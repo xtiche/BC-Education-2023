@@ -9,7 +9,7 @@ report 50100 "Customer Invoices"
     {
         dataitem(Customer; Customer)
         {
-            PrintOnlyIfDetail = true;
+            // PrintOnlyIfDetail = true;
             column(No; "No.")
             {
             }
@@ -39,6 +39,8 @@ report 50100 "Customer Invoices"
 
     requestpage
     {
+        SaveValues = true;
+
         layout
         {
             area(Content)
