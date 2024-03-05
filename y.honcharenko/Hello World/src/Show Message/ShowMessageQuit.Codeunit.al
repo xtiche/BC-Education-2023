@@ -1,4 +1,4 @@
-codeunit 50102 Quit implements "IShow Messsage"
+codeunit 50102 "Show Message - Quit" implements "IShow Messsage"
 {
 
     procedure ShowMessage()

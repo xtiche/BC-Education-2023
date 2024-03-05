@@ -1,4 +1,4 @@
-codeunit 50101 HelloWorld implements "IShow Messsage"
+codeunit 50101 "Show Message - HW" implements "IShow Messsage"
 {
 
     procedure ShowMessage()
