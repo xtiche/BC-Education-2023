@@ -27,6 +27,7 @@ pageextension 50105 "PTE Customer Card(SW)" extends "Customer Card"
                     QRCode.ShowMessage();
                 end;
             }
+
         }
     }
 }

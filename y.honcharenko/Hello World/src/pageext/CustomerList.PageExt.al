@@ -42,6 +42,17 @@ pageextension 50106 "PTE Customer List" extends "Customer List"
                     Report.Run(Report::"Customer Invoices", true, true, Customer);
                 end;
             }
+            action("Show Max Value")
+            {
+                ApplicationArea = All;
+
+                trigger OnAction()
+                var
+                    WebSerivceExample: Codeunit "Web Serivce Example";
+                begin
+                    WebSerivceExample.SendRequestToGetMaxValue(5, 10);
+                end;
+            }
         }
     }
 }
