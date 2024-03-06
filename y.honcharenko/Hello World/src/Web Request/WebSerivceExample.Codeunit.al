@@ -10,7 +10,7 @@ codeunit 50106 "Web Serivce Example"
     begin
         url := 'http://pspls:7047/BC/WS/DEV%20SOTCH/Codeunit/WebServiceExample';
         HttpClient.SetBaseAddress('http://pspls:7047/BC/WS/DEV%20SOTCH/Codeunit/WebServiceExample');
-        //AddHttpBasicAuthHeader('admin', '123qweasD', HttpClient);
+        AddHttpBasicAuthHeader('admin', '123qweasD', HttpClient);
 
         HttpContent.WriteFrom(
             '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="urn:microsoft-dynamics-schemas/codeunit/WebServiceExample">' +
@@ -24,15 +24,15 @@ codeunit 50106 "Web Serivce Example"
             '</soapenv:Envelope>');
 
         HttpContent.GetHeaders(Headers);
-        //Headers.Add('SOAPAction', 'Max');
+        Headers.Add('SOAPAction', 'Max');
 
         HttpClient.Post(url, HttpContent, Response);
 
-        // if Response.IsSuccessStatusCode then begin
-        //     Response.Content().ReadAs(ResponseText);
-        //     Message(ResponseText);
-        // end else
-        //     HandlelError(Response);
+        if Response.IsSuccessStatusCode then begin
+            Response.Content().ReadAs(ResponseText);
+            Message(ResponseText);
+        end else
+            HandlelError(Response);
     end;
 
     local procedure AddHttpBasicAuthHeader(UserName: Text[50]; Password: Text[50]; var HttpClient: HttpClient);
